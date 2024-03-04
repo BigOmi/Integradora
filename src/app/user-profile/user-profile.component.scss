@@ -1,0 +1,466 @@
+// palette
+$hotpink: #fe7dbd;
+$mauve: #dfb8f1;
+$mauve-dark: #c9a3ff;
+$white: #fff;
+$linen: #fae8d9;
+$purple: #8947aa;
+$pink: #fecacc;
+$seafoam: #cdfff0;
+$rose: #ffc7e4;
+$yellow: #ffedb3;
+$orange-light: #fecaca;
+$orange: #fbc7ad;
+$red: #f88da5;
+$candypink: #ffb3e3;
+$brown: #cd8486;
+
+// colours
+$bg: $hotpink;
+$circle:$mauve;
+$base: $white;
+$horns: $linen;
+$eye: $purple;
+$muzzle: $pink;
+
+[v-cloak] {
+  visibility: hidden;
+}
+
+body {
+  background-color: $bg;
+  margin: 0;
+}
+
+.container {
+  width: 40vw;
+  height: 40vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+// base cow
+.cow-wrap {
+  width: 80%;
+  height: 80%;
+  background-color: $mauve;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1rem solid $white;
+  &.is-party {
+    background-color: $rose;
+    .party-hat,
+    .party-hat-bobble {
+      display: inline-block;
+    }
+  }
+  &.is-pizza {
+    background-color: $mauve-dark;
+    .cow-head,
+    .cow-body,
+    .cow-ear {
+      background-color: $candypink;
+    }
+    .cow-mouth {
+      z-index: 1;
+    }
+    .pizza,
+    .pizza-crust,
+    .pizza-topping {
+      display: inline-block;
+    }
+  }
+  &.is-tie {
+    background-color: $candypink;
+    .bow,
+    .bow-ear {
+      display: inline-block;
+    }
+  }
+  &.is-glow {
+    background-color: $mauve-dark;
+    .cow-head,
+    .cow-body,
+    .cow-ear {
+      background-color: $mauve;
+    }
+    .cow-eye {
+      background-color: $white;
+      box-shadow: 0 0 1rem $white;
+    }
+    .gem {
+      display: inline-block;
+    }
+  }
+  &.is-glasses {
+    background-color: $candypink;
+    .cow-head,
+    .cow-body,
+    .cow-ear {
+      background-color: $brown;
+    }
+    .glasses-lense,
+    .glasses-middle {
+      display: inline-block;
+    }
+  }
+}
+
+.cow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cow-head,
+.cow-body,
+.cow-ears,
+.cow-ear,
+.cow-horns,
+.cow-horn,
+.cow-horn::before,
+.cow-eyes,
+.cow-eye,
+.cow-muzzle,
+.cow-mouth,
+.cow-mouth-line,
+.cow-mouth-moo {
+  position: absolute;
+}
+
+.cow-head {
+  width: 70%;
+  height: 65%;
+  background-color: $base;
+  border-radius: 50% 50% 40% 40%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+.cow-ears {
+  width: 100%;
+  height: 30%;
+  top: 15%;
+}
+
+.cow-ear {
+  width: 20%;
+  height: 150%;
+  background-color: $base;
+  border-radius: 70% 30% 0 0;
+  &--left {
+    left: -6%;
+    transform: rotate(-125deg);
+  }
+  &--right {
+    right: -6%;
+    transform: rotate(125deg) scaleX(-1);
+  }
+}
+
+.cow-horns {
+  width: 100%;
+  height: 30%;
+  top: 3%;
+}
+
+.cow-horn {
+  width: 18%;
+  height: 100%;
+  background-color: $horns;
+  border-radius: 90% 50% 45% 45%;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    background-color: $horns;
+    border-radius: 50%;
+    top: 55%;
+  }
+  &--left {
+    left: 0;
+    transform: rotate(-60deg);
+  }
+  &--right {
+    right: 0;
+    transform: rotate(60deg) scaleX(-1);
+  }
+}
+
+.cow-eyes {
+  width: 100%;
+  height: 20%;
+  top: 50%;
+}
+
+.cow-eye {
+  width: 10%;
+  height: 50%;
+  background-color: $eye;
+  border-radius: 50%;
+  &--left {
+    left: 17%;
+  }
+  &--right {
+    right: 17%;
+  }
+}
+
+.cow-muzzle {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: $muzzle;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.cow-mouth {
+  width: 100%;
+  height: 20%;
+  top: 50%;
+}
+
+.cow-mouth-line {
+  width: 8%;
+  height: 15%;
+  background-color: $eye;
+  border-radius: 0.375rem;
+  &--left {
+    left: 44.1%;
+    transform: rotate(-45deg);
+  }
+  &--right {
+    right: 44.1%;
+    transform: rotate(45deg);
+  }
+}
+
+.cow-body {
+  width: 65%;
+  height: 50%;
+  background-color: $base;
+  border-radius: 60% 60% 50% 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
+// custom cow traits
+.party-hat,
+.party-hat-bobble {
+  display: none;
+  position: absolute;
+}
+
+.party-hat {
+    width: 30%;
+    background: $seafoam;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    transform: translate(-50%);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 1%;
+      width: 50%;
+      height: 7.5vw;
+      background: linear-gradient(to right top, $seafoam 50%, transparent 50%)
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 50%;
+      height: 7.5vw;
+      background: linear-gradient(to left top, $seafoam 50%, transparent 50%)
+    }
+}
+
+.party-hat-bobble {
+  width: 10%;
+  height: 10%;
+  background-color: $yellow;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  top: -35%;
+}
+
+.pizza,
+.pizza-crust,
+.pizza-topping {
+  position: absolute;
+  display: none;
+}
+
+.pizza {
+  width: 30%;
+  text-decoration: none;
+  z-index: 1;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 1%;
+    width: 50%;
+    height: 7.5vw;
+    background: linear-gradient(to right top, $yellow 50%, transparent 50%)
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50%;
+    height: 7.5vw;
+    background: linear-gradient(to left top, $yellow 50%, transparent 50%)
+  }
+}
+
+.pizza-crust {
+  width: 30%;
+  height: 6%;
+  background-color: $orange;
+  z-index: 2;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 0.5rem;
+}
+
+.pizza-topping {
+  width: 8%;
+  height: 8%;
+  background-color: $red;
+  border-radius: 50%;
+  top: 70%;
+  left: 45%;
+  transform: translate(-50%);
+  z-index: 1;
+  &--2 {
+    top: 60%;
+    left: 50%;
+  }
+  &--3 {
+    top: 76%;
+    left: 55%;
+  }
+}
+
+.bow,
+.bow-ear {
+  position: absolute;
+  display: none;
+}
+
+.bow {
+  width: 10%;
+  height: 10%;
+  background-color: #222;
+  border-radius: 50%;
+  z-index: 1;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.bow-ear {
+  width: 15%;
+  height: 13%;
+  background-color: #333;
+  border-radius: 20% 70% 70% 20%;
+  z-index: -1;
+  top: 79%;
+  transform: translate(-50%);
+  &--left {
+    left: 43%;
+  }
+  &--right {
+    transform: translate(50%) scaleX(-1);
+    right: 43%;
+  }
+}
+
+.gem {
+  position: absolute;
+  display: none;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%) scaleY(-1);
+  color: $white;
+  font-size: 6vw;
+  text-shadow: 0 0 1rem $white;
+}
+
+.glasses-lense,
+.glasses-middle {
+  position: absolute;
+  display: none;
+}
+
+.glasses-lense {
+  width: 40%;
+  height: 40%;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  border: 0.5rem solid $white;
+  z-index: 1;
+  top: 32%;
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
+}
+
+.glasses-middle {
+  width: 18%;
+  height: 3%;
+  background-color: $white;
+  z-index: 1;
+  top: 45%;;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+// controls
+.controls {
+  text-align: center;
+}
+
+.controls-button {
+  border: 0;
+  background-color: $white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  color: $eye;
+  &:hover {
+    background-color: $horns;
+  }
+  &.is-active {
+    background-color: $eye;
+    color: $white;
+  }
+}

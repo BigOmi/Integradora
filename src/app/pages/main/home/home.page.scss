@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.de {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.top-content {
+  position: absolute;
+  top: 20%; /* Ajusta la posición vertical del logo */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.button-content {
+  position: absolute;
+  top: 50%; /* Ajusta la posición vertical del botón */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.hola {
+  background-color: #000000;
+  font-family: 'Cascadia Code', monospace;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title class="ion-text-center">
+      <strong>Login</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container">
+  <div class="background-container">
+    <img src="./assets/3.jpg" alt="" class="de">
+    <div class="app-logo">
+      <div class="ion-text-center">
+        <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit()">
+          <ion-card class="center-card">
+            <ion-card-content>
+              <ion-text>
+                <img src="./assets/2.png" alt="">
+              </ion-text>
+
+              <app-custom-input
+                autocomplete="email"
+                [control]="form.controls.email"
+                type="email"
+                label="Correo">
+              </app-custom-input>
+
+              <div class="validators" *ngIf="form.controls.email.errors && form.controls.email.touched">
+                <div *ngIf="form.controls.email.errors?.['required']">El correo es requerido</div>
+                <div *ngIf="form.controls.email.errors?.['email']">Ingrese un correo válido</div>
+              </div>
+
+              <app-custom-input
+                [control]="form.controls.password"
+                type="password"
+                label="Contraseña"
+              ></app-custom-input>
+
+              <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
+                <div *ngIf="form.controls.password.errors?.['required']">La contraseña es requerida</div>
+              </div>
+
+              <ion-button color="dark" expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
+                Ingresar
+                <ion-icon slot="end" name="log-in-outline"></ion-icon>
+              </ion-button>
+
+              <ion-button color="danger" class="custom-button ion-margin-top" routerLink="sign-up" expand="block" mode="ios">
+                Registrate
+                <ion-icon slot="end" name="person-add-outline"></ion-icon>
+              </ion-button>
+
+              <br>
+              <p routerLink="forgot-password">¿Olvidaste tu contraseña?</p><br>
+            </ion-card-content>
+          </ion-card>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

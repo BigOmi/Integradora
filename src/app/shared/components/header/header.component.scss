@@ -1,0 +1,59 @@
+.admin{
+    font-size: 13px;
+}
+
+ion-toolbar {
+  --ion-color-success: #91011C;
+  --ion-color-success-rgb: 145, 1, 28;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #7f0d1a;
+  --ion-color-success-tint: #a2162c;
+}
+
+ion-title {
+  font-family: 'Cascadia Code', monospace;
+}
+
+.custom-toolbar {
+  --background: #F8E0CE;
+}
+
+.custom-title {
+  font-size: 26px;
+}
+.custom-titl {
+
+  font-size: 26px;
+}
+
+.custom-list ion-item {
+  font-family: 'Cascadia Code', monospace;
+  color: #91011C;
+  font-size: 18px;
+}
+.custom-item ion-icon {
+  color: #91011C;
+}
+
+.cerrar-sesion-btn {
+  border-radius: 50px;
+
+}
+
+
+.hola {
+  background-color: #91011C; /* Color de fondo */
+  font-family: 'Cascadia Code', monospace;
+  font-size: 15px;
+  color: #fff; /* Color del texto */
+  padding: 10px 10px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 20px; /* Radio de borde para esquinas redondeadas */
+  cursor: pointer; /* Cursor de puntero al pasar por encima */
+  position: fixed; /* Fijar la posición */
+  bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajuste para centrar horizontalmente */
+}
+

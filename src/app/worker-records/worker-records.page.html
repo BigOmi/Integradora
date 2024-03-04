@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registros de Trabajadores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-container">
+  <img src="./assets/4.png" alt="Fondo" class="background-image">
+
+  <ion-card class="worker-card" routerLink="/worker-records/farmers">
+    <img src="https://media.istockphoto.com/id/1354242697/es/foto/cultivador-de-maíz-masculino-tranquilo-caucásico-en-mono-camina-por-el-campo-de-maíz-con.jpg?s=612x612&w=0&k=20&c=g8sKz8jXHXn-oqoyws8y8YnsVGM_t_x4EHo1P6pxsF0=" alt="Granjeros" class="worker-image">
+    <ion-card-header>
+      <ion-card-title>Granjeros</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="worker-card" routerLink="/worker-records/veterinarians">
+    <img src="https://www.agronegocios.es/wp-content/uploads/2020/03/foto-central-_baja.jpg" alt="Veterinarios" class="worker-image">
+    <ion-card-header>
+      <ion-card-title>Veterinarios</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <!-- Agrega más tarjetas según los tipos de trabajadores -->
+</ion-content>

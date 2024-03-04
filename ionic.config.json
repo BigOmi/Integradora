@@ -1,0 +1,7 @@
+{
+  "name": "VakApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar-title"> <!-- Cambiado el color a "transparent" -->
+    <ion-buttons slot="start">
+      <!-- Eliminado el botón de menú hamburguesa -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registros de Animales</ion-title>
+    <ion-buttons slot="end">
+      <ion-avatar slot="end" (click)="goToUserProfile()" style="padding: .1rem; width: 40px; height: 40px; margin: 4px;" class="custom-avatar">
+        <img src="./assets/1.png" alt="">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-container">
+  <img src="./assets/4.png" alt="Fondo" class="background-image">
+
+  <ion-card class="animal-card" routerLink="/animal-records/cattle">
+    <img src="https://media.istockphoto.com/id/1319467946/photo/young-black-and-white-cow-heifer-in-a-meadow-looking-in-the-camera.jpg?s=612x612&w=0&k=20&c=Z1maGtrEMrbAEVw6ZTJwyvq2_rkolky9LJX34mSZ6Kg=" alt="Cow Icon" class="animal-icon">
+    <ion-card-header>
+      <ion-card-title>Ganado Bovino</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="animal-card" routerLink="/animal-records/sheep">
+    <img src="https://i0.wp.com/ovinapp.com/wp-content/uploads/2023/08/ovinos-texel-borregos-ovinapp-genetica.webp?resize=1125%2C675&ssl=1" alt="Sheep Icon" class="animal-icon">
+    <ion-card-header>
+      <ion-card-title>Ovinos</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Agrega más cards según los tipos de registros de animales -->
+</ion-content>

@@ -1,0 +1,11 @@
+<div class="card-wrap"
+  (mousemove)="handleMouseMove($event)"
+  (mouseenter)="handleMouseEnter()"
+  (mouseleave)="handleMouseLeave()">
+  <div class="card" [ngStyle]="cardStyle">
+    <div class="card-bg" [ngStyle]="cardBgTransform"></div>
+    <div class="card-info">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
